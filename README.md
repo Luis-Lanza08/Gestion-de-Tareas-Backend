@@ -73,7 +73,7 @@ GET /api/tasks?search=react&status=pendiente&from=2025-04-01&to=2025-04-20
 ## Ejecutar localmente
 
 ```bash
-npm run dev
+node server.js
 ```
 
 El servidor quedará corriendo en `http://localhost:4000`.
