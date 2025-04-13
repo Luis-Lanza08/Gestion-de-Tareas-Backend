@@ -1,9 +1,17 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
-  host: process.env.DB_HOST,
+// Usamos DATABASE_URL para entornos de producción (Render)
+// y valores por separado si estás en local (opcional)
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
-  logging: false,
+  protocol: 'postgres',
+  logging: false, // opcional: desactiva logs de SQL en consola
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false, // necesario para Render
+    },
+  },
 });
 
 module.exports = sequelize;
