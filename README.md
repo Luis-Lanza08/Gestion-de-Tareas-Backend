@@ -3,7 +3,7 @@
 
 Este es el backend del proyecto **Gestor de Tareas**, una API RESTful construida con Node.js, Express y Sequelize para manejar autenticación y operaciones CRUD sobre tareas.
 
-##Tecnologías
+## Tecnologías
 
 - Node.js
 - Express
@@ -42,7 +42,7 @@ PORT=5432
 
 ---
 
-##Endpoints disponibles
+## Endpoints disponibles
 
 | Método | Ruta | Descripcién |
 |--------|------|-------------|
@@ -80,7 +80,7 @@ El servidor quedará corriendo en `http://localhost:4000`.
 
 ---
 
-##Despliegue
+## Despliegue
 
 Este backend fue desplegado en [Render](https://render.com/).  
 Asegurate de configurar las variables de entorno en el dashboard de Render y de conectar con una base de datos PostgreSQL.
